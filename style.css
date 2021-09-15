@@ -1,0 +1,93 @@
+@import url(" https://fonts.googleapis.com/css2?family=Varta:wght@300;400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Varta", sans-serif;
+}
+.container {
+  width: 1152px;
+  height: 720px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url("images/bg-cover.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.container__heading {
+  font-weight: 300;
+  padding: 12px 20px;
+  margin: 20px 0;
+  border-left: 10px solid rgb(5, 5, 5);
+  font-size: 20px;
+}
+.container__desc {
+  padding-left: 30px;
+  width: 640px;
+  font-style: italic;
+}
+.arrow {
+  padding: 15px 10px;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  font-size: 20px;
+  transform: translateY(-50%);
+}
+.arrow.disable {
+  color: rgba(0, 0, 0, 0.302);
+  pointer-events: none;
+}
+.left-arrow {
+  left: 0;
+}
+.rignt-arrow {
+  right: 0;
+}
+.slider {
+  /* position: absolute;
+  top: 61%;
+  transform: translateY(-50%); */
+  padding-top: 130px;
+  padding-bottom: 140px;
+  display: flex;
+  justify-content: left;
+  width: 1152px;
+  overflow-x: auto;
+}
+.slider::-webkit-scrollbar {
+  display: none;
+}
+.slider-card {
+  padding: 20px 0 10px 0;
+  text-align: center;
+  font-size: 14px;
+  min-width: 275px;
+  margin: 0 50px;
+  position: relative;
+  left: 0;
+  transition: 0.7s;
+}
+.silder-card__picture > img {
+  width: 150px;
+  height: 150px;
+}
+
+.slider-card.active {
+  transform: scale(1.18, 1.7);
+  background-image: url("images/wheel-bg.jpg");
+  border: 2px solid rgba(128, 128, 128, 0.7);
+}
+.slider-card.active .silder-card__picture > img {
+  transform: scale(1.4, 1);
+}
+.slider-card.active > .slider-card__text-holder {
+  transform: scale(0.96, 0.7);
+}
